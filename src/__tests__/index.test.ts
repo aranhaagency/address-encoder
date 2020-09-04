@@ -201,6 +201,14 @@ const vectors: Array<TestVector> = [
     ],
   },
   {
+    name: 'XMR',
+    coinType: 128,
+    passingVectors: [
+      { text: '55LTR8KniP4LQGJSPtbYDacR7dz8RBFnsfAKMaMuwUNYX6aQbBcovzDPyrQF9KXF9tVU6Xk3K8no1BywnJX6GvZX8yJsXvt', hex: '185c8044a93a0d4b73fdd9698b1c8935d3bcae206e26590ce425c2085e2fb81db3eedc5c8d9e3b0a8963c04fa980e4cbaa31ac5c427e21f841a7e93f279aa2fa46a660b70d' },
+      { text: '7BnERTpvL5MbCLtj5n9No7J5oE5hHiB3tVCK5cjSvCsYWD2WRJLFuWeKTLiXo5QJqt2ZwUaLy2Vh1Ad51K7FNgqcHgjW85o', hex: '24fb9b3fb9b324a0cc7123515e0768f666217e1eb91bc1f7a8912b61528a7dd7ae9e8ab653489b876e547fca6e4f640f095fbc5d46390d48398684cbea5869e793e38ea79a' },
+    ],
+  },
+  {
     name: 'ATOM',
     coinType: 118,
     passingVectors: [
