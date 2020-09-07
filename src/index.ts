@@ -211,6 +211,15 @@ const bech32Chain = (name: string, coinType: number, prefix: string) => ({
   name,
 });
 
+function b32encodeAlgoAddr(data: Buffer): string {
+    return b32encode(hex2a(data.toString('hex')));
+}
+
+function b32decodeAlgoAddr(data: string): Buffer {
+    const addr =  data.toString().toUpperCase().replace(/=/g, '');
+    return b32decode(addr);
+}
+
 function b32encodeXemAddr(data: Buffer): string {
   return b32encode(hex2a(data.toString('hex')));
 }
@@ -286,6 +295,7 @@ const formats: IFormat[] = [
   getConfig('KSM', 434, ksmAddrEncoder, ksmAddrDecoder),
   hexChecksumChain('XDAI', 700),
   bech32Chain('BNB', 714, 'bnb'),
+  getConfig('ALGO', 196, b32encodeAlgoAddr, b32decodeAlgoAddr),
 ];
 
 export const formatsByName: { [key: string]: IFormat } = Object.assign({}, ...formats.map(x => ({ [x.name]: x })));
